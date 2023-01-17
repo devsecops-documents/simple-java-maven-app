@@ -5,7 +5,7 @@ WORKDIR /app
 RUN git clone https://github.com/devsecops-documents/simple-java-maven-app.git
 
 #Maven
-FROM maven:3.8.6-openjdk-11 as build
+FROM maven:3.8.6-openjdk-8 as build
 WORKDIR /app
 COPY --from=git /app/simple-java-maven-app  /app
 RUN mvn package
