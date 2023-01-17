@@ -2,7 +2,7 @@
 FROM alpine/git as git
 
 WORKDIR /app
-RUN git clone https://github.com/devsecops-documents/simple-java-maven-app.git
+RUN git clone -b 2.10 https://github.com/devsecops-documents/simple-java-maven-app.git
 
 #Maven
 FROM maven:3.8.6-openjdk-8 as build
