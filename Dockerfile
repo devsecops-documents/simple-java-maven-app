@@ -8,6 +8,7 @@ RUN git clone https://github.com/devsecops-documents/simple-java-maven-app.git
 FROM maven:3.8.5-openjdk-17 as build
 WORKDIR /app
 COPY --from=git /app/simple-java-maven-app  /app
+RUN java -version
 RUN mvn package
 
 #java
